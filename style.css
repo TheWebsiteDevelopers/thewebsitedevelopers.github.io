@@ -4,39 +4,32 @@ body {
   background: #f8f9fa;
   color: #333;
 }
-
 header {
   background: #222;
   padding: 1rem;
 }
-
 nav {
   display: flex;
   gap: 1rem;
   justify-content: center;
 }
-
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
-
 nav a:hover {
   text-decoration: underline;
 }
-
 main {
   padding: 2rem;
   max-width: 800px;
   margin: auto;
 }
-
 h1, h2 {
   color: #222;
-  text-align: center
+  text-align: center;
 }
-
 .card {
   background: white;
   padding: 1.5rem;
@@ -44,13 +37,12 @@ h1, h2 {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 footer {
   text-align: center;
   padding: 1rem;
   background: #eee;
   margin-top: 2rem;
-  
+}
 .package-table {
   margin: 0 auto;
   border-collapse: collapse;
@@ -58,14 +50,24 @@ footer {
   width: 100%;
   max-width: 900px;
 }
-
 .package-table th,
 .package-table td {
   padding: 12px 20px;
   border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
 }
-
-/* Mobile Darstellung */
+.package-table thead th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+.package-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+.package-table tbody tr:hover {
+  background: #e8f4ff;
+  transition: background 0.2s ease;
+}
 @media (max-width: 768px) {
   .package-table,
   .package-table thead,
@@ -76,11 +78,9 @@ footer {
     display: block;
     width: 100%;
   }
-
   .package-table thead {
-    display: none; /* Kopfzeile ausblenden */
+    display: none;
   }
-
   .package-table tr {
     margin-bottom: 1rem;
     border: 1px solid #ccc;
@@ -89,7 +89,6 @@ footer {
     background: #f9f9f9;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
-
   .package-table td {
     text-align: left;
     padding: 8px 10px;
@@ -97,15 +96,16 @@ footer {
     border-bottom: 1px solid #eee;
     position: relative;
   }
-
   .package-table td:last-child {
     border-bottom: none;
   }
-
   .package-table td::before {
     content: attr(data-label); /* Holt den Spaltennamen */
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
     color: #333;
+  }
+  .package-table tr:hover {
+    background: #f9f9f9;
   }
