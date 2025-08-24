@@ -109,3 +109,13 @@ footer {
   .package-table tr:hover {
     background: #f9f9f9;
   }
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.logo {
+  height: 50px; /* kannst du z. B. 40px oder 60px machen */
+}
