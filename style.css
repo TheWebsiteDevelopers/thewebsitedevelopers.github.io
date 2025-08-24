@@ -116,6 +116,26 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
 }
+header {
+  background: #222;
+  padding: 1rem;
+  text-align: center;
+}
 .logo {
-  height: 50px; /* kannst du z. B. 40px oder 60px machen */
+  height: 60px; /* kannst du anpassen: z. B. 50px oder 80px */
+  display: block;
+  margin: 0 auto 10px auto; /* Logo zentrieren + Abstand unten */
+}
+nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
 }
