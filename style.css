@@ -5,18 +5,29 @@ body {
   color: #333;
 }
 header {
-  background: #222;
+  background: #f4f4f4;
   padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  max-height: 80px;
+  width: auto;
+  display: block;
+  margin: 0 auto 10px auto;
 }
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
   justify-content: center;
+  flex-wrap: wrap;
 }
 nav a {
-  color: white;
+  color: #222;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1rem;
 }
 nav a:hover {
   text-decoration: underline;
@@ -37,12 +48,6 @@ h1, h2 {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  margin-top: 2rem;
-}
 .package-table {
   margin: 0 auto;
   border-collapse: collapse;
@@ -54,19 +59,6 @@ footer {
 .package-table td {
   padding: 12px 20px;
   border: 1px solid #ddd;
-  text-align: center;
-  vertical-align: middle;
-}
-.package-table thead th {
-  background: #f5f5f5;
-  font-weight: bold;
-}
-.package-table tbody tr:nth-child(even) {
-  background: #fafafa;
-}
-.package-table tbody tr:hover {
-  background: #e8f4ff;
-  transition: background 0.2s ease;
 }
 @media (max-width: 768px) {
   .package-table,
@@ -100,42 +92,22 @@ footer {
     border-bottom: none;
   }
   .package-table td::before {
-    content: attr(data-label); /* Holt den Spaltennamen */
+    content: attr(data-label);
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
     color: #333;
   }
-  .package-table tr:hover {
-    background: #f9f9f9;
-  }
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-header {
-  background: #222;
-  padding: 1rem;
+footer {
   text-align: center;
+  padding: 1rem;
+  background: #eee;
+  margin-top: 2rem;
 }
-.logo {
-  height: 60px; /* kannst du anpassen: z. B. 50px oder 80px */
-  display: block;
-  margin: 0 auto 10px auto; /* Logo zentrieren + Abstand unten */
-}
-nav {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover {
-  text-decoration: underline;
-}
+@media (max-width: 600px) {
+  .logo {
+    max-height: 60px;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
