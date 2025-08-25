@@ -97,12 +97,6 @@ h1, h2 {
     display: block;
     margin-bottom: 5px;
     color: #333;
-  }
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #eee;
-  margin-top: 2rem;
 }
 @media (max-width: 600px) {
   .logo {
