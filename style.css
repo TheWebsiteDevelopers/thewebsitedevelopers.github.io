@@ -114,8 +114,8 @@ h1, h2 {
   }
 
   .package-table tr {
+    width: 90%;
     margin: 0 auto 1rem auto; 
-    max-width: 500px;
     border: 1px solid #ccc;
     border-radius: 12px;
     padding: 12px;
