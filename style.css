@@ -1,5 +1,6 @@
-/* Das ist eine eigenständig geschriebene CSS Datei von Aiman Bitar */
-
+/* Das ist eine eigenständig geschriebene CSS Datei von THE Website Developers */
+/* letzte Aktualisierung war am: 28.08.2025 */
+/* https://thewebsitedevelopers.github.io/ */
 
 /* --------------- Allgemein ------------------ */
 body {
@@ -166,14 +167,14 @@ img {vertical-align: middle;}
 
 
 .slideshow-container {
-  max-width: 500px;
+  max-width: 750px;
   position: relative;
   margin: auto;
 }
 /* Untertitel */
 .text {
   color: #000000;
-  font-size: 25px;
+  font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
@@ -182,7 +183,7 @@ img {vertical-align: middle;}
 }
 .numbertext {
   color: #000000;
-  font-size: 25px;
+  font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
