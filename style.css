@@ -97,7 +97,7 @@ h1, h2 {
   transition: background 0.2s ease;
 }
 
-/* ------------ Tabelle Mobile-Version -------------- */
+/* ------------ Tabelle -------------- */
 @media (max-width: 768px) {
   .package-table,
   .package-table thead,
@@ -114,7 +114,8 @@ h1, h2 {
   }
 
   .package-table tr {
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto; 
+    max-width: 500px;
     border: 1px solid #ccc;
     border-radius: 12px;
     padding: 12px;
@@ -122,13 +123,17 @@ h1, h2 {
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   }
 
+  .package-table th {
+    display: none;
+  }
+
   .package-table td {
-    text-align: left;
+    text-align: center;
     padding: 10px;
     border: none;
     border-bottom: 1px solid #eee;
     position: relative;
-    font-size: 0.95rem
+    font-size: 0.95rem;
   }
 
   .package-table td:last-child {
@@ -138,6 +143,7 @@ h1, h2 {
   .package-table td::before {
     content: attr(data-label);
     font-weight: bold;
+    text-align: left;
     display: block;
     margin-bottom: 5px;
     color: #222;
@@ -168,7 +174,6 @@ footer {
 {box-sizing: border-box;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
-
 
 .slideshow-container {
   max-width: 700px;
