@@ -184,10 +184,10 @@ img {vertical-align: middle;}
 .text {
   color: white
   text-shadow:
-    2px 2px 0 #000,
-    -2px 2px 0 #000,
-    2px -2px 0 #000,
-    -2px -2px 0 #000;
+    2px 2px 0 #00000,
+    -2px 2px 0 #00000,
+    2px -2px 0 #00000,
+    -2px -2px 0 #00000;
   font-size: 15px;
   padding: 10px 12px;
   position: absolute;
