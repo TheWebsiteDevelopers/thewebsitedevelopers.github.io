@@ -1,0 +1,81 @@
+<!-- Das ist eine eigenständig geschriebene HTML Datei von THE Website Developers -->
+<!-- letzte Aktualisierung war am: 14.09.2025 -->
+<!-- https://thewebsitedevelopers.github.io/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TWD - Homepage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+  <div class="header-container">
+    <img src="file_00000000422461fb8ccdb566227ce72c.png" alt="TWD Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="packages.html">Packages</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+  <main>
+    <h1>Welcome to TWD, THE Website Developers 🚀</h1>
+    <p>Here you will find information about our services, available packages, and ways to get in touch with us.</p>
+  <div class="slideshow-container">
+
+     <div class="mySlides fade">
+      <img src="Stepik-Zertifikat-Aiman.png" style="width:100%">
+      <div class="text" style="color:black;">We are a certified team</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="Programmieren-mit-Python-scaled.jpg" style="width:100%">
+      <div class="text" style="color:white;">We are already experienced</div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="Stepik-Zertifikat-Leander.png" style="width:100%">
+      <div class="text" style="color:black;">certified with distinction</div>
+    </div>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+
+  <script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+  </script>
+    <h2>Why us?</h2>
+    <p>We are a certified team with extensive programming experience and speak several languages ​​to provide our customers with optimal service. Each of us had to sucsessfull complete 2 courses and complete a final test.</p>
+    <p>With us, you benefit from fast implementation, transparent pricing with no hidden costs, and personalized support tailored precisely to your needs. Our websites utilize modern technologies. They are mobile-friendly and optimized for all devices. This ensures that your project not only looks professional but is also easily found. We rely on satisfied customer reviews and personalized support. Even after completion, we don't leave you stranded:</p>
+    <p>We offer maintenance, updates, and hosting support from a single source. We also support you in developing your individual branding—from unique web design to logo design. Our goal is to combine fair prices with high quality and personalized service.</p>
+  </main>
+  
+  <footer>© 2025 TWD, THE Website Developing</footer>
+</body>
+</html>
