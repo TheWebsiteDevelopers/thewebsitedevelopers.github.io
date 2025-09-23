@@ -176,7 +176,7 @@ footer {
 }
 
 /* --------- diese Slideshow mit Fotos ------------ */
-{box-sizing: border-box;}
+.duhs {box-sizing: border-box;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
