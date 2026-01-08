@@ -1,0 +1,327 @@
+/* Diese Datei wurde von Aiman Bitar geschrieben */
+/* Zuletzt bearbeitet 08.01.2026 */
+
+/* Allgemein */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Inter", sans-serif;
+  color: #333;
+  background: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+img { content-visibility: auto; }
+
+/* Navgations Leiste */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgb(180, 180, 180);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+  position: relative;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.logo-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo-center img {
+  height: 100px;
+  width: auto;
+  border-radius: 0;
+  object-fit: contain;
+  position: relative;
+  top: 10px;
+  transition: height 0.2s ease;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Mobiles Menü */
+.mobile-menu { display: none; font-size: 28px; cursor: pointer; }
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  background: rgb(180, 180, 180);
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 90px;
+  z-index: 90;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: max-height 260ms ease, opacity 200ms ease, transform 200ms ease;
+  pointer-events: none;
+}
+
+.mobile-nav.open {
+  max-height: 420px;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 85;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+.mobile-overlay.visible { opacity: 1; pointer-events: auto; }
+.mobile-nav a {
+  padding: 12px 0;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+}
+
+.hero {
+  height: 90vh;
+  position: relative;
+  background: url("img/Programmieren-mit-Python-scaled.jpg")
+    center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+  padding: 20px;
+  animation: fadeIn 1.3s ease;
+}
+
+.hero h1 { font-size: 3rem; }
+
+.btn-primary {
+  background: #4c94ff;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.btn-primary:hover { background: #3574d8; }
+
+.section { padding: 80px 40px; text-align: center; }
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+.product {
+  background: #acacac;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+.product:hover { transform: translateY(-5px); }
+
+.mission { background: #eef4ff; padding: 40px; border-radius: 10px; }
+.edition-list { list-style: none; padding: 0; }
+.edition-list li { margin: 10px 0; font-size: 1.2rem; }
+
+.instagram-embed {
+  display: flex;
+  justify-content: center;
+}
+.instagram-embed img {
+  width: 250px;
+  opacity: 0.8;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  max-width: 100%;
+  margin: auto;
+}
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+footer {
+  background: #2d2d2d;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  margin-top: auto;
+}
+
+main {
+  flex: 1 0 auto;
+  padding-bottom: 48px; /* Abstand zwischen Inhalt und Footer */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 800px) {
+  .nav-links { display: none; }
+  .mobile-menu { display: block; }
+
+  .logo-center {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+  .logo-center img {
+    height: 60px;
+  }
+  main {
+    padding-bottom: 32px;
+  }
+}
+/* ------------ Tabelle ------------- */
+.package-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+
+.package-table th,
+.package-table td {
+  padding: 12px 20px;
+  border: 1px solid #ddd;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.package-table thead th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.package-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.package-table tbody tr:hover {
+  background: #e8f4ff;
+  transition: background 0.2s ease;
+}
+
+/* ------------ Tabelle -------------- */
+@media (max-width: 768px) {
+  .package-table,
+  .package-table thead,
+  .package-table tbody,
+  .package-table th,
+  .package-table td,
+  .package-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .package-table thead {
+    display: none;
+  }
+
+  .package-table tr {
+    margin: 0 auto 1rem auto; 
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 12px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+
+  .package-table th {
+    display: none;
+  }
+
+  .package-table td {
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    font-size: 0.95rem;
+  }
+
+  .package-table td:last-child {
+    border-bottom: none;
+  }
+
+  .package-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+    color: #222;
+  }
+}
+/* ------------ Text Startseite "Aber warum wir?" -------------- */
+.warum-wir h1, .warum-wir h2, .warum-wir h3, .warum-wir h4, .warum-wir p, .warum-wir li {
+  color: #222;
+  text-align: center; 
+}
+
+.warum-wir {
+  margin-top: 48px; /* Abstand zu den Produkt-Karten */
+}
+/*------------- Text und Social Media Logo in der Datenschutzseite --------------*/
+.social-link { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; }
+.social-icon { height: 20px; width: auto; display: block; }
